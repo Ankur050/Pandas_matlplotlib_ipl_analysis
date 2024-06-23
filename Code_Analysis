@@ -1,0 +1,39 @@
+import pandas as pd
+import matplotlib.pylot as   mp
+
+df=pd.read_csv('ipl_24_del.csv')
+bf=pd.read_csv('ipl_24_mat.csv')
+
+# 1) Getting total number of matches played in IPL 
+distinct_match_ids = df['match_id'].nunique()
+print(distinct_match_ids)
+
+# 2)  Getting total balls bowled in ipl valid or non valid 
+total_bowls_bowled=len(df)
+print(total_bowls_bowled)
+
+
+# 3) count venue where team chose to bast first
+bat_first = bf[bf['toss_decision'] == 'bat']['venue'].value_counts().head(10)
+print("Venues where teams chose to bat first:\n", bat_first)
+
+# 4) Count venues where teams chose to field first
+field_first = bf[bf['toss_decision'] == 'field']['venue'].value_counts().head(10)
+
+print("Venues where teams chose to field first:\n", field_first)
+
+
+#5) on which venue most 200+ runs are scored 
+
+two_hundred_plus = bf[bf['target_runs'] >=200]['venue'].value_counts().head(10)
+print('Most two hundred runs scored on top 10 venues are:\n ',two_hundred_plus)
+
+# 6) which team won the most toss 
+toss_win=bf['toss_winner'].value_counts().head(10)
+toss_win
+
+# 7) which top 10 venues most matches played 
+match_count=bf['venue'].value_counts().head(10)
+match_count
+
+
