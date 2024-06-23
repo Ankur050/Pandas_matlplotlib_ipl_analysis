@@ -1,0 +1,42 @@
+The project aims to provide comprehensive insights into IPL data, focusing on various aspects such as batting, teams, bowlers, and season-wise statistics. The analysis will be performed using Python libraries such as Pandas for data manipulation and Matplotlib for visualization. 
+The results will help identify key trends and performances in IPL history.
+
+
+1) How many matches totally palayed in ipl -> done 
+2) Which venue perecntage is good for batting first and second
+3) On which venue batters score most hundreds
+4)Which venue batters get more zeros
+5) Which venue has most matches played
+
+
+-- RElated sixes  using pandas 
+6)Which batter hit most sixes in ipl 
+7)Which batter hit most sixes in powerplay 
+8) WHich batter hit most sixes in last over or death overs 
+9)Top 5 batters of ipl runs 
+10)Which batsman play most dot balls
+
+-- Related Teams using matplotlib 
+
+11)Which teas won more matches 
+12) Which teams played most match
+13) Which wons most toss
+14)Which teams hits most sixes
+15)NUmber of matches played at venues
+
+
+-- RElaed bowlers 
+16) most wickets 
+17)economical bowlers 
+18) most wickets in death and powerplay
+19)Most dot balls bowled by a bowler 
+20) MOst six conceded by a bowler 
+
+
+other questions 
+-- season wise winners 
+-- season wise purple and orange cap holders 
+-- season wise most palyer of the match award 
+-- season wise most sixes hit by player 
+-- season wise most dot balls bowled by players 
+-- how many bowls bowled in ipl ->done 
