@@ -52,3 +52,33 @@ player_runs=df.groupby('batter')['batsman_runs'].sum()
 top_5=player_runs.sort_values(ascending=False).head(5)
 top_5
 
+# 11)  Top 10  batters who plays most dot balls in ipl 
+dot_balls =df[df['batsman_runs']==0]
+dot_plays=dot_balls['batter'].value_counts().head(10)
+dot_plays
+
+# 12) Top 10  batters who takes  most single runs in ipl 
+single_balls =df[df['batsman_runs']==1]
+single_plays=single_balls['batter'].value_counts().head(10)
+single_plays
+
+# 13) Top 10  batters who takes  most double runs in ipl 
+double_runs =df[df['batsman_runs']==2]
+double_plays=double_runs['batter'].value_counts().head(10)
+double_plays
+
+# 14) Top 10  batters who takes  three runs in ipl 
+three_runs =df[df['batsman_runs']==3]
+three_plays=three_runs['batter'].value_counts().head(10)
+three_plays
+
+# 15) Top 10  batters who hits most fours  in ipl 
+fours =df[df['batsman_runs']==4]
+fours_plays=fours['batter'].value_counts().head(10)
+fours_plays
+
+
+
+
+
+
