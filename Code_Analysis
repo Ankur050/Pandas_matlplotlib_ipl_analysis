@@ -36,4 +36,19 @@ toss_win
 match_count=bf['venue'].value_counts().head(10)
 match_count
 
+# 8) which top 10 batsman gets most man of the match awards 
+
+man_match=bf['player_of_match'].value_counts().head(10)
+man_match
+
+#  9) which top 10 batter hits most sixes in ipl 
+sixes=df[df['batsman_runs']==6]
+player_six=sixes['batter'].value_counts().head(10)
+player_six
+
+
+# 10) top 5 batsman to score most runs of ipl 
+player_runs=df.groupby('batter')['batsman_runs'].sum()
+top_5=player_runs.sort_values(ascending=False).head(5)
+top_5
 
