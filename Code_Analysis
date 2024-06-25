@@ -79,6 +79,18 @@ fours_plays
 
 
 
+# 16 ) using matplotlib for displaying graphical forms 
+# plot the graphs of count which top 10 team wons the most matches 
+plt.figure(figsize=(10,6))
+match_winner=bf['winner'].value_counts().head(10)
+ax=match_winner.plot(kind='bar',title='Number of matches won by the teams',xlabel='Teams',ylabel='Number of win',color='skyblue')
+
+for p in ax.patches:
+    ax.annotate(str(p.get_height()), (p.get_x() + p.get_width() / 2., p.get_height()), ha='center', va='center', xytext=(0, 10), textcoords='offset points')
+
+plt.show()
+
+
 
 
 
