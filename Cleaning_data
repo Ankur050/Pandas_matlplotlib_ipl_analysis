@@ -1,1 +1,11 @@
+#In our dataset, stadium names have varied over time, leading to inconsistencies. For example, what was once known as 'Firoz Shah Kotla' in Delhi is now referred to as 'Arun Jaitley Stadium'.
+#To address these variations, I conducted an Extract, Transform, Load (ETL) process. This involved extracting stadium name data, identifying historical and current names, and transforming them to ensure uniformity.
+#Using pandas  I  update stadium names across the dataset. This standardization enhances data accuracy and facilitates clearer analysis and reporting, reflecting current naming conventions consistently.
 
+# Changing the venue M chinaswaammy Stadium Bangalore 
+
+replace_dict = {'M.Chinnaswamy Stadium': 'M Chinnaswamy Stadium',
+                'M Chinnaswamy Stadium, Bengaluru': 'M Chinnaswamy Stadium'}
+bf['venue'] = bf['venue'].replace(replace_dict)
+
+print(bf)
