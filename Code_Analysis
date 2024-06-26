@@ -104,5 +104,20 @@ winner_final
 
 
 
+# 19) how many times each team play super over occurred in ipl
+
+# Filter rows where super over occurred
+super_over_matches = bf[bf['super_over'] == 'Y']
+
+# Count occurrences for team1
+team1_super_over = super_over_matches['team1'].value_counts()
+
+# Count occurrences for team2
+team2_super_over = super_over_matches['team2'].value_counts()
+
+# Combine the counts
+total_super_over = team1_super_over.add(team2_super_over, fill_value=0)
+
+total_super_over
 
 
