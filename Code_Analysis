@@ -91,6 +91,18 @@ for p in ax.patches:
 plt.show()
 
 
+# 17) how many times super over occurred in ipl  season wise 
+
+sup_over=bf[bf['super_over']=='Y'].groupby('season').size()
+sup_over
+
+
+# 18) season wise winner from ipl 
+
+winner_final=bf[bf['match_type']=='Final'].groupby('season')['winner'].first()
+winner_final
+
+
 
 
 
