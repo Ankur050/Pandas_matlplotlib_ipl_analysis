@@ -121,3 +121,13 @@ total_super_over = team1_super_over.add(team2_super_over, fill_value=0)
 total_super_over
 
 
+#20) season wise most player of the match award 
+
+
+season_motm = bf['player_of_match'].groupby(bf['season']).value_counts().groupby(level=0).idxmax()
+season_motm
+
+
+
+#21)
+
