@@ -129,5 +129,24 @@ season_motm
 
 
 
-#21)
+# 21) most dismisaal type in ipl
+
+count_dismissal=df['dismissal_kind'].value_counts()
+count_dismissal.plot(kind='bar',xlabel='Dismissal Type',ylabel='Count')
+
+
+#22) which player get the most run out 
+run_out=df[df['dismissal_kind']=='run out'].groupby('player_dismissed').size().sort_values(ascending=False)
+run_out
+
+#23) most catch taken by players in ipl
+catch_taken=df[df['dismissal_kind']=='caught'].groupby('fielder').size().sort_values(ascending=False)
+catch_taken
+
+
+#24) most run out done by player 
+fielder_runout=df[df['dismissal_kind']=='run out'].groupby('fielder').size().sort_values(ascending=False).head(10)
+fielder_runout.plot(kind='bar',xlabel='Fielder',ylabel='Frequency')
+
+
 
